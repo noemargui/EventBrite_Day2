@@ -4,8 +4,8 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :users, foreign_key: 'attendee_id'
 
-  #validate :must_begin_in_the_future
-  #validate :duration_multiple_of_five
+  validate :must_begin_in_the_future
+  validate :duration_multiple_of_five
   validates :start_date, presence: true
   validates :duration, presence: true, numericality: { greater_than: 0, only_integer: true}
   validates :title, presence: true, length: { in: 5..140 }
