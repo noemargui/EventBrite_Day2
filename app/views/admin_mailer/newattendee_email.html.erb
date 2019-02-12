@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello <%= @admin.first_name %> !</h1>
+    <p>
+      Un petit message pour te prévenir que <%= @attendee.first_name %> <%= @attendee.last_name %> s'est inscrit à ton event intitulé : <%= @event.title %> ! Et un de plus ;)
+    </p>
+  </body>
+</html>
